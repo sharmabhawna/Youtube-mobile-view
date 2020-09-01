@@ -1,24 +1,30 @@
 import React from 'react';
 import styled from "styled-components";
 import { pxToRem } from "../utils";
-import { ReactComponent as Like} from '../assets/icons/like.svg'
-import { ReactComponent as Dislike} from '../assets/icons/dislike.svg'
-import { ReactComponent as Share} from '../assets/icons/share.svg'
-import { ReactComponent as Save} from '../assets/icons/save.svg'
-import { ReactComponent as Report} from '../assets/icons/report.svg'
+import { ReactComponent as Like } from '../assets/icons/like.svg'
+import { ReactComponent as Dislike } from '../assets/icons/dislike.svg'
+import { ReactComponent as Share } from '../assets/icons/share.svg'
+import { ReactComponent as Save } from '../assets/icons/save.svg'
+import { ReactComponent as Report } from '../assets/icons/report.svg'
+import { ReactComponent as Collapse } from '../assets/icons/down-arrow.svg'
 import { LabelValue } from "./common/LabelValue";
 
-export const VideoDetails = ({title, views, likes, dislikes}) => {
+export const VideoDetails = ({ title, views, likes, dislikes }) => {
   return (
     <Wrapper>
-      <Title>{title}</Title>
-      <Views>{views} views</Views>
+      <Details>
+        <LabelValueStyled
+          label={<Title>{title}</Title>}
+          value={<Views>{views} views</Views>}
+        />
+        <Collapse/>
+      </Details>
       <Actions>
-        <LabelValue label={<Like/>} value={likes}/>
-        <LabelValue label={<Dislike/>} value={dislikes}/>
-        <LabelValue label={<Share/>} value={'Share'}/>
-        <LabelValue label={<Save/>} value={'Save'}/>
-        <LabelValue label={<Report/>} value={'Report'}/>
+        <LabelValue label={<Like />} value={likes} />
+        <LabelValue label={<Dislike />} value={dislikes} />
+        <LabelValue label={<Share />} value={'Share'} />
+        <LabelValue label={<Save />} value={'Save'} />
+        <LabelValue label={<Report />} value={'Report'} />
       </Actions>
     </Wrapper>
   );
@@ -30,6 +36,15 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+`
+
+const Details = styled.div`
+  display: flex;
+  justify-content: space-between;
+`
+
+const LabelValueStyled = styled(LabelValue)`
+  align-items: flex-start;
 `
 
 const Title = styled.span`
