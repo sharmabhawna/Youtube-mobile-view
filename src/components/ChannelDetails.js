@@ -9,7 +9,7 @@ export const ChannelDetails = ({ logoUrl, channelName, subscribers }) => {
       <hr />
       <Wrapper>
         <Details>
-          <ChannelLogo><img src={logoUrl} height={'50px'} /></ChannelLogo>
+          <StyledImage src={logoUrl} height={'50px'} />
           <LabelValueStyled label={<ChannelName>{channelName}</ChannelName>} value={`${subscribers} subscribers`}/>
         </Details>
         <SubscribeLink>SUBSCRIBE</SubscribeLink>
@@ -31,7 +31,8 @@ const Details = styled.div`
   display: flex;
 `
 
-const ChannelLogo = styled.div`
+const StyledImage = styled.img`
+  border-radius: 100%;
   margin-right: ${pxToRem(18)};
 `
 
