@@ -8,10 +8,10 @@ export const ChannelDetails = ({ logoUrl, channelName, subscribers }) => {
     <>
       <hr />
       <Wrapper>
-        <ChannelInfo>
+        <Details>
           <ChannelLogo><img src={logoUrl} height={'50px'} /></ChannelLogo>
           <LabelValueStyled label={<ChannelName>{channelName}</ChannelName>} value={`${subscribers} subscribers`}/>
-        </ChannelInfo>
+        </Details>
         <SubscribeLink>SUBSCRIBE</SubscribeLink>
       </Wrapper>
       <hr />
@@ -27,7 +27,7 @@ const Wrapper = styled.div`
   align-items: center;
 `
 
-const ChannelInfo = styled.div`
+const Details = styled.div`
   display: flex;
 `
 
