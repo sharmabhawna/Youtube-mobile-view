@@ -5,17 +5,25 @@ import { ResponsivePlayer } from "./components/ResponsivePlayer";
 import { pxToRem } from "./utils";
 import { Header } from "./components/Header";
 import { VideoDetails } from "./components/VideoDetails";
-import constants from "./constants";
 import { ChannelDetails } from "./components/ChannelDetails";
+import {
+  CHANNEL_LOGO_URL,
+  CHANNEL_NAME,
+  CHANNEL_SUBSCRIBERS,
+  VIDEO_DISLIKES,
+  VIDEO_LIKES,
+  VIDEO_TITLE,
+  VIDEO_URL
+} from "./constants";
 
 function App() {
   return (
     <MobileView>
       <Main>
-        <Header/>
-        <ResponsivePlayer url={'https://www.youtube.com/watch?v=JKCgwL-IfgM'} />
-        <VideoDetails title={constants.VIDEO_TITLE} views={'150K'} likes={'1.4K'} dislikes={'218'} shareLink={''}/>
-        <ChannelDetails logoUrl={"https://yt3.ggpht.com/a/AATXAJwuTmBKZD9sTE28x5qOHN_vRCPCP528iQeVqauh=s176-c-k-c0xffffffff-no-rj-mo"} channelName={'LevelUp Tuts'} subscribers={'324K'}/>
+        <Header />
+        <ResponsivePlayer url={VIDEO_URL} />
+        <VideoDetails title={VIDEO_TITLE} views={VIDEO_LIKES} likes={VIDEO_LIKES} dislikes={VIDEO_DISLIKES} />
+        <ChannelDetails logoUrl={CHANNEL_LOGO_URL} channelName={CHANNEL_NAME} subscribers={CHANNEL_SUBSCRIBERS} />
       </Main>
     </MobileView>
   );

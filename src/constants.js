@@ -1,3 +1,8 @@
-export default {
-  VIDEO_TITLE: 'What Is React Native?'
-}
+export const CHANNEL_LOGO_URL = 'https://yt3.ggpht.com/a/AATXAJwuTmBKZD9sTE28x5qOHN_vRCPCP528iQeVqauh=s176-c-k-c0xffffffff-no-rj-mo'
+export const CHANNEL_NAME = 'LevelUp Tuts'
+export const CHANNEL_SUBSCRIBERS = '324K'
+export const VIDEO_URL = 'https://www.youtube.com/watch?v=JKCgwL-IfgM'
+export const VIDEO_TITLE = 'What Is React Native?'
+export const VIDEO_VIEWS = '150K'
+export const VIDEO_LIKES = '1.4K'
+export const VIDEO_DISLIKES = '218'
