@@ -5,43 +5,36 @@ import { ReactComponent as Search } from '../assets/icons/search.svg';
 import { ReactComponent as Menu } from '../assets/icons/three-dots.svg';
 import { pxToRem } from "../utils";
 
-export const Header = () => {
-  return (
-    <Container>
-      <LeftShifted>
-        <Play />
-        <StyledSpan>Premium</StyledSpan>
-      </LeftShifted>
-      <RightShifted>
-        <StyledSearch />
-        <Menu />
-      </RightShifted>
-    </Container>
-  );
-};
+export const Header = () => (
+  <Container>
+    <StyledDiv>
+      <Play />
+      <Title>Premium</Title>
+    </StyledDiv>
+    <StyledDiv>
+      <StyledSearch />
+      <Menu />
+    </StyledDiv>
+  </Container>
+);
 
 const Container = styled.div`
   color: #f7f7f7;
-  background: #1f1f1f;
-  font-size: 24px;
-  padding: 20px;
-  z-index: 1;
+  background: #222222;
+  font-size: ${pxToRem(24)};
+  padding: ${pxToRem(20)};
+  z-index: 5;
   display: flex;
   justify-content: space-between;
   align-items: center;
 `
 
-const LeftShifted = styled.div`
+const StyledDiv = styled.div`
   display: flex;
   align-items: center;
 `
 
-const RightShifted = styled.div`
-  display:flex;
-  align-items: center;
-`
-
-const StyledSpan = styled.span`
+const Title = styled.span`
   margin-left: ${pxToRem(5)};
 `
 

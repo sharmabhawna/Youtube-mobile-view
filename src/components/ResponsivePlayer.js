@@ -1,6 +1,5 @@
 import React from "react";
 import ReactPlayer from "react-player/youtube";
-import './ResponsivePlayer.css'
 
 export const ResponsivePlayer = ({url}) => {
   return (
