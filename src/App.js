@@ -32,7 +32,6 @@ function App() {
 
 const Main = styled.div`
   width: ${pxToRem(500)};
-  padding-top: ${pxToRem(20)};
   border-left: 1px solid #dadadb;
   border-right: 1px solid #dadadb;
   background-color: white;
