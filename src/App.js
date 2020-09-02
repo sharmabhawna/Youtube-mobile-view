@@ -10,38 +10,33 @@ import {
   CHANNEL_LOGO_URL,
   CHANNEL_NAME,
   CHANNEL_SUBSCRIBERS,
+  RELATED_VIDEOS,
   VIDEO_DISLIKES,
   VIDEO_LIKES,
   VIDEO_TITLE,
   VIDEO_URL
 } from "./constants";
+import { RelatedVideos } from "./components/RelatedVideos";
 
 function App() {
   return (
-    <MobileView>
-      <Main>
-        <Header />
-        <ResponsivePlayer url={VIDEO_URL} />
-        <VideoDetails title={VIDEO_TITLE} views={VIDEO_LIKES} likes={VIDEO_LIKES} dislikes={VIDEO_DISLIKES} />
-        <ChannelDetails logoUrl={CHANNEL_LOGO_URL} channelName={CHANNEL_NAME} subscribers={CHANNEL_SUBSCRIBERS} />
-      </Main>
-    </MobileView>
+    <Main>
+      <Header />
+      <ResponsivePlayer url={VIDEO_URL} />
+      <VideoDetails title={VIDEO_TITLE} views={VIDEO_LIKES} likes={VIDEO_LIKES} dislikes={VIDEO_DISLIKES} />
+      <ChannelDetails logoUrl={CHANNEL_LOGO_URL} channelName={CHANNEL_NAME} subscribers={CHANNEL_SUBSCRIBERS} />
+      <RelatedVideos videos={RELATED_VIDEOS} />
+    </Main>
   );
 }
 
 const Main = styled.div`
   width: ${pxToRem(500)};
-  border: 1px solid #9A9A9A;
-  z-index: 1;
+  padding-top: ${pxToRem(20)};
+  border-left: 1px solid #dadadb;
+  border-right: 1px solid #dadadb;
   background-color: white;
-`
-
-const MobileView = styled.div`
-  width: ${pxToRem(600)};
-  padding-top: 50px;
-  border: 1px solid black;
-  display: flex;
-  justify-content: center;
+  z-index: 1;
 `
 
 export default App;
