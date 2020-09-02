@@ -7,8 +7,8 @@ export const RelatedVideoInfo = ({ video }) => (
     <RelatedVideoImage src={video.url} />
     <VideoInfo>
       <div>{video.title}</div>
-      <span>{video.channelName}</span>
-      <span>{video.views} views</span>
+      <StyledSpan>{video.channelName}</StyledSpan>
+      <StyledSpan>{video.views} views</StyledSpan>
     </VideoInfo>
   </Wrapper>
 );
@@ -28,4 +28,10 @@ const VideoInfo = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+`
+
+const StyledSpan = styled.span`
+  color: #707070;
+  font-size: ${pxToRem(16)};
+  line-height: 1.5;
 `
