@@ -14,7 +14,7 @@ import {
   VIDEO_DISLIKES,
   VIDEO_LIKES,
   VIDEO_TITLE,
-  VIDEO_URL
+  VIDEO_URL, VIDEO_VIEWS
 } from "./constants";
 import { RelatedVideos } from "./components/RelatedVideos";
 
@@ -23,7 +23,7 @@ function App() {
     <Main>
       <Header />
       <ResponsivePlayer url={VIDEO_URL} />
-      <VideoDetails title={VIDEO_TITLE} views={VIDEO_LIKES} likes={VIDEO_LIKES} dislikes={VIDEO_DISLIKES} />
+      <VideoDetails title={VIDEO_TITLE} views={VIDEO_VIEWS} likes={VIDEO_LIKES} dislikes={VIDEO_DISLIKES} />
       <ChannelDetails logoUrl={CHANNEL_LOGO_URL} channelName={CHANNEL_NAME} subscribers={CHANNEL_SUBSCRIBERS} />
       <RelatedVideos videos={RELATED_VIDEOS} />
     </Main>

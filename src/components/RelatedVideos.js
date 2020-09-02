@@ -9,12 +9,14 @@ export const RelatedVideos = ({ videos }) => {
     <Wrapper>
       <StyledDiv>
         <span>Up next</span>
-        <span>Autoplay</span>
-        <Toggle/>
+        <div>
+          <StyledSpan>Autoplay</StyledSpan>
+          <Toggle />
+        </div>
       </StyledDiv>
-        {
-          videos.map(video => <RelatedVideoInfo video={video}/>)
-        }
+      {
+        videos.map(video => <RelatedVideoInfo video={video} />)
+      }
     </Wrapper>
   );
 };
@@ -29,4 +31,8 @@ const StyledDiv = styled.div`
   justify-content: space-between;
   align-items: center;
   margin-bottom: ${pxToRem(16)};
+`
+
+const StyledSpan = styled.span`
+  margin-right: ${pxToRem(10)};
 `
